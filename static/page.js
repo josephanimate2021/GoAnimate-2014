@@ -30,21 +30,23 @@ function toObjectString(attrs, params) {
 module.exports = function (req, res, url) {
 	if (req.method != "GET") return;
 	const query = url.query;
-
+        var swfFolder = process.env.SWF_URL;
+	var stFolder = process.env.STORE_URL;
+	var ctFolder = process.env.CLIENT_URL;
 	var attrs, params, title;
 	switch (url.pathname) {
 		case "/cc": {
 			title = 'Character Creator';
 			attrs = {
-				data: process.env.SWF_URL + '/cc.swf', // data: 'cc.swf',
+				data: swfFolder + '/cc.swf', // data: 'cc.swf',
 				type: 'application/x-shockwave-flash', 
 				id: 'char_creator',
 			};
 			params = {
 				flashvars: {
 					apiserver: "/",
-					storePath: process.env.STORE_URL + "/<store>",
-					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
+					storePath: stFolder + "/<store>",
+					clientThemePath: ctFolder + "/<client_theme>",
 					original_asset_id: query["id"] || null,
 					themeId: "family",
 					ut: 60,
@@ -60,7 +62,7 @@ module.exports = function (req, res, url) {
                     nextUrl: "/cc_browser",
 				},
 				allowScriptAccess: "always",
-				movie: process.env.SWF_URL + "/cc.swf", // 'http://localhost/cc.swf'
+				movie: swfFolder + "/cc.swf", // 'http://localhost/cc.swf'
 			};
 			break;
 		}
@@ -72,14 +74,14 @@ module.exports = function (req, res, url) {
 					: `m-${fUtil[query.noAutosave ? "getNextFileId" : "fillNextFileId"]("movie-", ".xml")}`;
 			title = "Video Editor";
 			attrs = {
-				data: process.env.SWF_URL + "/go_full.swf",
+				data: swfFolder + "/go_full.swf",
 				type: "application/x-shockwave-flash",
 				id: "video_maker",
 			};
 			params = {
 				flashvars: {
 					apiserver: "/",
-					storePath: process.env.STORE_URL + "/<store>",
+					storePath: stFolder + "/<store>",
 					isEmbed: 1,
 					ctc: "go",
 					ut: 60,
@@ -90,7 +92,7 @@ module.exports = function (req, res, url) {
 					lid: 13,
 					isLogin: "Y",
 					retut: 0,
-					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
+					clientThemePath: ctFolder + "/<client_theme>",
 					themeId: "custom",
 					tray: "retro",
 					tlang: "en_US",
@@ -110,18 +112,18 @@ module.exports = function (req, res, url) {
 		case "/player": {
 			title = "Video Player";
 			attrs = {
-				data: "https://josephanimate2021.github.io/animation/414827163ad4eb602/player.swf",
+				data: swfFolder + "/player.swf",
 				type: "application/x-shockwave-flash",
 				id: "video_player",
 			};
 			params = {
 				flashvars: {
 					apiserver: "/",
-					storePath: "https://josephanimate2021.github.io/store/3a981f5cb2739137/<store>",
+					storePath: stFolder + "/<store>",
 					ut: 30,
 					autostart: 1,
-					isWide: 1,
-					clientThemePath: "https://josephanimate2021.github.io/static/ad44370a650793d9/<client_theme>",
+					isWide: 0,
+					clientThemePath: ctFolder + "/<client_theme>",
 				},
 				allowScriptAccess: "always",
 				allowFullScreen: "true",
@@ -132,7 +134,7 @@ module.exports = function (req, res, url) {
 		case "/recordWindow": {
 			title = "Record Window";
 			attrs = {
-				data: "https://josephanimate2021.github.io/animation/414827163ad4eb602/player.swf",
+				data: swfFolder + "/player.swf",
 				type: "application/x-shockwave-flash",
 				id: "video_player",
 				quality: "medium",
@@ -140,11 +142,11 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					apiserver: "/",
-					storePath: process.env.STORE_URL + "/<store>",
+					storePath: stFolder + "/<store>",
 					ut: 30,
 					autostart: 0,
-					isWide: 1,
-					clientThemePath: "https://josephanimate2021.github.io/static/ad44370a650793d9/<client_theme>",
+					isWide: 0,
+					clientThemePath: ctFolder + "/<client_theme>",
 				},
 				allowScriptAccess: "always",
 				allowFullScreen: "true",
