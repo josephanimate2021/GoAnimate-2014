@@ -62,7 +62,7 @@ form {
 	width: 640px;
   }
   .preview-player h2 {
-	color: #2A2A2A;
+	color: #505e73;
 	font-size: 21px;
 	font-weight: normal;
 	line-height: 1;
@@ -74,7 +74,7 @@ form {
 	padding: 14px 0;
   }
   .preview-player a.close_btn {
-	color: #1C1C1C;
+	color: #1fbba6;
 	line-height: 24px;
 	font-size: 24px;
 	font-weight: bold;
@@ -83,12 +83,12 @@ form {
 	right: 10px;
   }
   .preview-player a.close_btn:hover {
-	color: #FF8000;
+	color: #029a85;
 	text-decoration: none;
   }
   .preview-button,
   .tutorial-button {
-	background-color: #646464;
+	background-color: #1fbba6;
 	border: 0;
 	border-radius: 4px;
 	color: #fff;
@@ -97,17 +97,18 @@ form {
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 36px;
+	text-transform: uppercase;
 	padding: 0 25px;
 	margin: 0 7px;
   }
   .preview-button:hover {
-	background-color: #373737;
+	background-color: #029a85;
   }
   .preview-button.save,
   .tutorial-button {
-	background-color: #646464;
+	background-color: #f27935;
   }
   .preview-button.save:hover,
   .tutorial-button:hover {
-	background-color: #373737;
+	background-color: #dd6522;
   }
