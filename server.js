@@ -46,4 +46,4 @@ module.exports = http
 			res.end();
 		}
 	})
-	.listen(env.PORT || env.SERVER_PORT, console.log());
+	.listen(env.PORT || env.SERVER_PORT, console.log('GoAnimate 2014 has started. To close, just simply click the X button on the top right corner of the command prompt.'));
