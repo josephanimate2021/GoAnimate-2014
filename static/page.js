@@ -31,6 +31,8 @@ module.exports = function (req, res, url) {
 	if (req.method != "GET") return;
 	const query = url.query;
         var swfFolder = process.env.SWF_URL;
+	var oswfFolder = "https://josephanimate2021.github.io/animation/877";
+	var octFolder = "https://josephanimate2021.github.io/static/477";
 	var stFolder = process.env.STORE_URL;
 	var ctFolder = process.env.CLIENT_URL;
 	var attrs, params, title;
@@ -112,7 +114,7 @@ module.exports = function (req, res, url) {
 		case "/player": {
 			title = "Video Player";
 			attrs = {
-				data: swfFolder + "/player.swf",
+				data: oswfFolder + "/player.swf",
 				type: "application/x-shockwave-flash",
 				id: "Player",
 				width: "100%",
@@ -150,8 +152,8 @@ module.exports = function (req, res, url) {
 					originalId: "0zEt_fo4L-5k",
 					is_emessage: "0",
 					storePath: stFolder + "/<store>",
-					clientThemePath: ctFolder + "/<client_theme>",
-					animationPath: swfFolder + "/",
+					clientThemePath: octFolder + "/<client_theme>",
+					animationPath: oswfFolder + "/",
 					isEmbed: "0",
 					refuser: null,
 					utm_source: null,
@@ -178,7 +180,7 @@ module.exports = function (req, res, url) {
 		case "/recordWindow": {
 			title = "Record Window";
 			attrs = {
-				data: swfFolder + "/player.swf",
+				data: oswfFolder + "/player.swf",
 				type: "application/x-shockwave-flash",
 				id: "Player",
 				width: "100%",
@@ -217,8 +219,8 @@ module.exports = function (req, res, url) {
 					originalId: "0zEt_fo4L-5k",
 					is_emessage: "0",
 					storePath: stFolder + "/<store>",
-					clientThemePath: ctFolder + "/<client_theme>",
-					animationPath: swfFolder + "/",
+					clientThemePath: octFolder + "/<client_theme>",
+					animationPath: oswfFolder + "/",
 					isEmbed: "0",
 					refuser: null,
 					utm_source: null,
