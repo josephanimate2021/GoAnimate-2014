@@ -172,7 +172,7 @@ module.exports = function (req, res, url) {
 					initcb: "playerLoaded",
 					showshare: false,
 				},
-				movie: swfFolder + "/player.swf",
+				movie: oswfFolder + "/player.swf",
 			};
 			break;
 		}
@@ -239,7 +239,7 @@ module.exports = function (req, res, url) {
 					initcb: "playerLoaded",
 					showshare: false,
 				},
-				movie: swfFolder + "/player.swf",
+				movie: oswfFolder + "/player.swf",
 			};
 			break;
 		}
