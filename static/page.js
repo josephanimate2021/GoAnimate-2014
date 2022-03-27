@@ -32,7 +32,6 @@ module.exports = function (req, res, url) {
 	const query = url.query;
         var swfFolder = process.env.SWF_URL;
 	var stFolder = process.env.STORE_URL;
-	var stoFolder = "https://josephanimate2021.github.io/store/3a981f5cb2739137/";
 	var ctFolder = process.env.CLIENT_URL;
 	var attrs, params, title;
 	switch (url.pathname) {
@@ -150,7 +149,7 @@ module.exports = function (req, res, url) {
 					is_slideshow: "0",
 					originalId: "0zEt_fo4L-5k",
 					is_emessage: "0",
-					storePath: stoFolder + "/<store>",
+					storePath: stFolder + "/<store>",
 					clientThemePath: ctFolder + "/<client_theme>",
 					animationPath: swfFolder + "/",
 					isEmbed: "0",
@@ -217,7 +216,7 @@ module.exports = function (req, res, url) {
 					is_slideshow: "0",
 					originalId: "0zEt_fo4L-5k",
 					is_emessage: "0",
-					storePath: stoFolder + "/<store>",
+					storePath: stFolder + "/<store>",
 					clientThemePath: ctFolder + "/<client_theme>",
 					animationPath: swfFolder + "/",
 					isEmbed: "0",
