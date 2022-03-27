@@ -1,16 +1,16 @@
-:: GoAnimate 2014 Launcher
+:: Wrapper Offline Remastered Launcher
 :: Creator: Joseph Animate 2021
 @echo off
 :: Peform A Dependency Install Check And Start Wrapper
 if not exist node_modules (
-echo Oof, it looks like that the dependencies for goanimate 2014 is not installed. Installing...
+echo Oof, it looks like that the dependencies for wrapper offline remastered is not installed. Installing...
 npm install
-echo All of the dependencies for goanimate 2014 is installed now. Starting Up GoAnimate...
+echo All of the dependencies for wrapper offline remastered is installed now. Starting Up Wrapper...
 npm start
 :: The server.js file will do the rest of the output.
 ) else (
-:: Start goanimate if all dependencies are installed
-echo Looks like that the dependencies for goanimate is in the right place. Starting Up GoAnimate...
+:: Start wrapper if all dependencies are installed
+echo Looks like that the dependencies for wrapper offline remastered is in the right place. Starting Up Wrapper...
 npm start
 :: The server.js file will do the rest of the output.
 )
