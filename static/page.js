@@ -86,7 +86,7 @@ module.exports = function (req, res, url) {
 					storePath: stFolder + "/<store>",
 					isEmbed: 1,
 					ctc: "go",
-					ut: 60,
+					ut: 30,
 					bs: "default",
 					appCode: "go",
 					page: "",
