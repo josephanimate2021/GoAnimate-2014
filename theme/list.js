@@ -49,7 +49,7 @@ const folder = process.env.THEME_FOLDER;
  * @returns {boolean}
  */
 module.exports = function (req, res, url) {
-	if (req.method != "POST" || url.path != "/goapi/getThemeList/") return;
+	if (req.method != "POST" || url.path != "/goapi/getThemeList/?") return;
 	res.setHeader("Content-Type", "application/zip");
 	fUtil.makeZip(`${folder}/_themelist.xml`, "themelist.xml").then((b) => res.end(b));
 	return true;
